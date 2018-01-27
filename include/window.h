@@ -7,9 +7,18 @@
 #include "point.h"
 
 namespace twod {
+    /*! \Brief A class representing a Window.
+     *
+     * Wraps around the glut windowing APIs to expose an RAII-enabled OOP API 
+     */
     class window
     {
         public:
+            /*! \Brief Possible types fo callback for a window.
+             *
+             * Each value corresponds to a different event for which a callback can be registered.
+             *
+             */
             enum callback_type {
                 DisplayFunc,
                 OverlayFunc,
@@ -33,6 +42,10 @@ namespace twod {
                 TimerFunc
             };
 
+            /*! Creates a Window
+             *  @param name Name of the window
+             *  @param pos Initial position of the window
+             */
             window(const std::string& name, const point& pos = {0, 0});
             void set_position(const point& pos);
             point position() const;
