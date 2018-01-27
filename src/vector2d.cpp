@@ -24,7 +24,7 @@ namespace twod {
         return left;
     }
     
-    std::size_t twod::vector2d::length() const
+    std::size_t vector2d::length() const
     {
         return 0;
     }
